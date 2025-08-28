@@ -1,0 +1,109 @@
+[복붙 프롬프트] 실습1-7: Vite 프로젝트 생성 & Git 초기화
+
+너는 나의 프론트엔드 실습 조교야. 목표는 다음과 같아.
+
+Vite로 book-es6-vite 프로젝트를 생성한다.
+
+옵션은 Framework: Vanilla, Variant: JavaScript로 선택한다.
+
+개발 서버가 로컬에서 정상 구동되도록 한다.
+
+Git을 초기화하고 첫 커밋까지 완료한다.
+
+내 환경 가정(중요): Windows 10/11, 기본 터미널은 PowerShell, 작업 루트는 C:\myfrontend\1ecmascript.
+
+아래 출력 형식을 엄격히 지켜서 답해줘.
+
+출력 형식(반드시 지켜)
+
+사전 점검
+
+표 형태로 내가 입력할 명령 / 기대 결과 두 컬럼으로 작성
+
+Node/NPM 설치 여부 확인(node -v, npm -v)
+
+설치가 안 되어 있으면 winget과 공식 다운로드 두 가지 설치 방법 제시(각각 명령 또는 링크 텍스트만)
+
+프로젝트 생성
+
+작업 디렉토리 생성 및 이동(C:\myfrontend\1ecmascript)
+
+npm create vite@latest 실행 시 프롬프트에 입력할 값을 박스 형태로 요약
+
+Project name: book-es6-vite
+
+Framework: Vanilla
+
+Variant: JavaScript
+
+생성 후 실행할 명령들을 코드블록으로 제시:
+
+cd C:\myfrontend\1ecmascript
+npm create vite@latest
+# 선택지는 위 프롬프트대로
+cd book-es6-vite
+npm install
+npm run dev
+
+
+dev 서버의 기본 URL과(예: http://localhost:5173) 브라우저에서 확인할 화면 설명(“Vite + JavaScript” 스플래시 등)
+
+폴더 구조 요약
+
+초기 생성 직후의 핵심 구조만 트리로 간단히 보여줘:
+
+book-es6-vite/
+  index.html
+  package.json
+  vite.config.js (있다면)
+  src/
+    main.js
+    style.css (있다면)
+
+
+간단 확인용 편집
+
+src/main.js 또는 index.html에 한 줄 추가해서 “Book Form Starter” 텍스트가 화면에 보이도록 하는 가장 간단한 방법 1가지 제시(코드블록).
+
+저장 후 HMR로 자동 반영되는지 설명 1줄.
+
+Git 초기화 & 첫 커밋
+
+.gitignore 내용에 node_modules/ 포함 예시 제시
+
+다음 명령을 코드블록으로 제시:
+
+cd C:\myfrontend\1ecmascript\book-es6-vite
+git init
+echo node_modules/ >> .gitignore
+git add .
+git commit -m "chore: init Vite (Vanilla JS) project for Book example"
+git branch -M main
+
+
+원격 저장소가 있다면 연결하는 방법(옵션):
+
+git remote add origin <YOUR_REPO_URL>
+git push -u origin main
+
+
+트러블슈팅(간단·핵심만)
+
+npm: command not found 또는 내부/외부 명령어 아님 → Node 재설치/터미널 재시작
+
+create-vite 설치 질문(“Need to install… Ok to proceed? (y)”) → y 입력
+
+포트 충돌(5173 사용 중) → 다른 포트로 실행하는 명령 예시 제시
+
+npm run dev -- --port 5174
+
+
+권한 문제 → 터미널을 관리자 권한으로 실행
+
+회사/기관 프록시 환경 → npm config set proxy/https-proxy 안내 한 줄
+
+제출물 체크리스트(불렛 5개 이내)
+
+프로젝트 폴더 전체(book-es6-vite)
+
+package.json에 dev, build, preview 스크립트 존재

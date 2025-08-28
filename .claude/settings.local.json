@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(tree:*)",
+      "Bash(cat:*)"
+    ],
+    "additionalDirectories": [
+      "C:\\c\\myfrontend\\Html_CSS_JavsScript_App\\Cmyfrontend1ecmascript"
+    ]
+  }
+}
