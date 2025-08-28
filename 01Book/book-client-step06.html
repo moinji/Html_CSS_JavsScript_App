@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Management</title>
-    <link rel="stylesheet" href="form.css">
+    <title>Book Management Step 06</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
     <div class="form-container">
-        <h1>도서 관리</h1>
+        <h1>도서 관리 시스템</h1>
         
         <!-- Error Box -->
         <div id="errorBox" role="alert" style="display: none;">
@@ -56,31 +56,31 @@
             
             <div class="form-actions">
                 <button type="submit" id="submitButton">등록</button>
-                <button type="button" id="cancelButton" style="display: none;">취소</button>
+                <button type="button" id="cancelButton" class="btn-secondary" style="display: none;">취소</button>
             </div>
         </form>
-        
-        <!-- Book List -->
-        <div class="table-container">
-            <h2>도서 목록</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>제목</th>
-                        <th>저자</th>
-                        <th>ISBN</th>
-                        <th>가격</th>
-                        <th>출판일</th>
-                        <th>액션</th>
-                    </tr>
-                </thead>
-                <tbody id="bookTbody">
-                </tbody>
-            </table>
-        </div>
     </div>
     
-    <script src="form.js"></script>
+    <!-- Book List -->
+    <div class="table-container">
+        <h2>도서 목록</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>제목</th>
+                    <th>저자</th>
+                    <th>ISBN</th>
+                    <th>가격</th>
+                    <th>출판일</th>
+                    <th>액션</th>
+                </tr>
+            </thead>
+            <tbody id="bookTbody">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="js/form.js"></script>
 </body>
 </html>
