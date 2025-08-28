@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>도서 관리</h1>
+        
+        <!-- Error Box -->
+        <div id="errorBox" role="alert" style="display: none;">
+            <p id="errorMessage"></p>
+        </div>
+        
+        <!-- Success Box -->
+        <div id="successBox" style="display: none;">
+            <p id="successMessage"></p>
+        </div>
+        
+        <!-- Book Form -->
+        <form id="bookForm" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title" required>
+                    <small class="form-help"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">저자</label>
+                    <input type="text" id="author" name="author" required>
+                    <small class="form-help"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" name="isbn" required>
+                    <small class="form-help"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">가격</label>
+                    <input type="number" id="price" name="price" required min="0">
+                    <small class="form-help"></small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="publishDate">출판일</label>
+                    <input type="date" id="publishDate" name="publishDate" required>
+                    <small class="form-help"></small>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" id="submitButton">등록</button>
+                <button type="button" id="cancelButton" style="display: none;">취소</button>
+            </div>
+        </form>
+        
+        <!-- Book List -->
+        <div class="table-container">
+            <h2>도서 목록</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>제목</th>
+                        <th>저자</th>
+                        <th>ISBN</th>
+                        <th>가격</th>
+                        <th>출판일</th>
+                        <th>액션</th>
+                    </tr>
+                </thead>
+                <tbody id="bookTbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="form.js"></script>
+</body>
+</html>
